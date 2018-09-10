@@ -1,0 +1,15 @@
+#nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 100vw;
+  top: 0;
+  color: #e8fdff;
+  background-color:  #00a087;
+  padding: 0px 2em 0px 2em;
+}
+
+#nav-bar.logo {
+  height: 80px;
+  width: 80px;
+}
+
