@@ -22,10 +22,10 @@ let db = 'tweets';
 MongoClient.connect(host, (err, db) => {
   if (err) throw err;
 
-  db.collection('tweets').find().toArray((err, results) => {
-      if (err) throw err;
-      console.log('connected');
-    })
+  // db.collection('tweets').find().toArray((err, results) => {
+  //     if (err) throw err;
+  //     console.log('connected');
+  //   })
 
 
 // The `data-helpers` module provides an interface to the database of tweets.
