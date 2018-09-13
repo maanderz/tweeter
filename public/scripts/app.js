@@ -9,15 +9,11 @@
     function renderTweets(tweets) {
     // loops through tweets
         for(tweet of tweets) {
-            if(tweet){
-                return jQuery.noop();
-            } else {
-                let newTweet = createTweetElement(tweet);
-                $('#tweet-container').prepend(newTweet)
+            let newTweet = createTweetElement(tweet);
+            $('#tweet-container').prepend(newTweet)
             }
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
-        }
     }
   
     function createTweetElement(tweet) {
@@ -64,13 +60,13 @@
                 data: formData
             }).then(function() {
                 //clearing form
-                $('textarea').empty();
+                $('#tweet-container').empty();
                 $('textarea').val('');
                 $('counter').text(140);
+
                 return $.ajax('/tweets');
                 }).then(renderTweets); //mongodb
             }
         })
         loadTweets();
-        //renderTweets();
     })
