@@ -53,4 +53,15 @@
   height: 10px;
 }
 
+.username {
+  background-color: #00a087;
+  margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-bottom: 50px;
+}
+
+.handle {
+  float: left;
+}
 

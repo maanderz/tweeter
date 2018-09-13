@@ -3,9 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-  
-  $(document).ready(function() {
 
+  $(document).ready(function() {
+    $('.error').hide();
     function renderTweets(tweets) {
     // loops through tweets
         for(tweet of tweets) {
@@ -19,17 +19,21 @@
     function createTweetElement(tweet) {
         console.log(tweet);
         let $tweet = $('<article>').addClass('tweet');
-        let $user = $('<h3>').addClass('username').text(tweet.user.name);
+        let $header = $('<header>').addClass('header');
+        let $user = $('<h2>').addClass('username').text(tweet.user.name);
         let $handle = $('<p>').addClass('handle').text(tweet.handle);
         let $image = $('<img>').addClass('avatar').attr('src', tweet.user.avatars.small);
         let $content = $('<p>').addClass('content').text(tweet.content.text);
-        let $created_at = $('<footer>').addClass('created').text(tweet.created_at);
+        let $footer = $('<footer>').addClass('footer');
+        let $created_at = $('<p>').addClass('created').text(tweet.created_at);
 
-        $tweet.append($user);
-        $tweet.append($handle);
-        $tweet.append($image);
+        $tweet.append($header);
+        $header.append($user);
+        $header.append($handle);
+        $header.append($image);
         $tweet.append($content);
-        $tweet.append($created_at);
+        $tweet.append($footer);
+        $footer.append($created_at);
 
         return $tweet;
     }
@@ -47,13 +51,12 @@
 
     $('form#input').on('submit', function(event){
         event.preventDefault();
-
         //content from form
         let formData = $('form#input').serialize();
 
         var input = $('textarea').val();
         if (input === "" || input.length > 140) {
-            alert('Invalid input');
+            $('.error').show();
         } else {
             $.ajax('/tweets', {
                 method: 'POST',
@@ -63,10 +66,22 @@
                 $('#tweet-container').empty();
                 $('textarea').val('');
                 $('counter').text(140);
-
+                $('.error').hide();
                 return $.ajax('/tweets');
                 }).then(renderTweets); //mongodb
             }
         })
         loadTweets();
+
     })
+
+    $(document).ready(function(){
+        $('.btn').click(function(){
+            $('.new-tweet').slideToggle();
+            $('textarea').focus();
+
+            
+          });
+    
+    });
+   

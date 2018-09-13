@@ -42,6 +42,8 @@
 
       <span class="header">Tweeter</span>
 
+      <input type="button" style="width:100px;height:50px" class="btn" value="Compose" />
+
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -52,12 +54,15 @@
         <form id ="input" action="/tweets/" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
+          <span class="error"> Invalid Input</span>
           <span class="counter">140</span>
         </form>
       </section>
 
       <section id = "tweet-container">
-        
+    
+
+
       </section>
 
     </main>
