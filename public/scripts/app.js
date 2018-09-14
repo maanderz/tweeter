@@ -21,19 +21,25 @@
         let $tweet = $('<article>').addClass('tweet');
         let $header = $('<header>').addClass('header');
         let $user = $('<h2>').addClass('username').text(tweet.user.name);
-        let $handle = $('<p>').addClass('handle').text(tweet.handle);
+        let $handle = $('<p>').addClass('handle').text(tweet.user.handle);
         let $image = $('<img>').addClass('avatar').attr('src', tweet.user.avatars.small);
         let $content = $('<p>').addClass('content').text(tweet.content.text);
         let $footer = $('<footer>').addClass('footer');
         let $created_at = $('<p>').addClass('created').text(tweet.created_at);
+        let $likeBtn = $('<img>').addClass('like').attr('src', "/images/images.png");
+        let $retweet = $('<img>').addClass('retweet').attr('src', "/images/retweet.png");
+        let $flag = $('<img>').addClass('flag').attr('src', "/images/flag.png");
 
         $tweet.append($header);
+        $header.append($image);
         $header.append($user);
         $header.append($handle);
-        $header.append($image);
         $tweet.append($content);
         $tweet.append($footer);
         $footer.append($created_at);
+        $footer.append($likeBtn);
+        $footer.append($retweet);
+        $footer.append($flag);
 
         return $tweet;
     }
@@ -65,10 +71,10 @@
                 //clearing form
                 $('#tweet-container').empty();
                 $('textarea').val('');
-                $('counter').text(140);
+                $('.counter').text('140');
                 $('.error').hide();
                 return $.ajax('/tweets');
-                }).then(renderTweets); //mongodb
+                }).then(renderTweets);
             }
         })
         loadTweets();
@@ -84,4 +90,3 @@
           });
     
 });
-

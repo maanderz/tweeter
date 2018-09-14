@@ -1,67 +1,108 @@
 #tweet-container {
   box-sizing: border-box;
   margin-top: 2em;
-  border-radius: 10px;
-  border: 0.5px solid darkgray;
+  border-radius: 1em;
+  
 }
 
-.tweet header{
-  background-color: #f1f1f1;
-  padding-top: 1em;
-  margin-top: 0;
-  margin-left: 1px;
-  margin-top: 1px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  padding-bottom: 3em;
-
+.tweet header {
+  background-color: #fffe8d;;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  padding-bottom: 1em;
+  display: flex;  
 }
 
-.tweet header > p {
-  float: right;
+.avatar {
+  border-radius: 1em;
+  margin: 1em 1em 0.5em 1em;
+  flex-basis: 25%;
+}
+
+.username {
+  margin-top: 1em;
+  flex-basis: 75%;
+  margin-right: 3em;
+  font-size: large;
+}
+
+.handle {
+  margin: 2em 0.5em 0.5em 0em;
+  padding-left: 3em;
+  margin-top: 1em;
+  font-size: medium;
+  flex-basis: 25%;
+}
+
+.like {
+  height: 1em;
+  width: 1em;
   margin-right: 1em;
+  margin-top: 1em;
+  display: none;
 }
 
-#tweet-container .tweet p{
-  display: inline-block;
+.retweet {
+  height: 1em;
+  width: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  display: none;
 }
 
-#tweet-container .tweet footer:before {
-        content:' ';
-        display:block;
-        border:0.5px solid darkgray;
-    }
+.flag {
+  height: 1em;
+  width: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  display: none;
+}
+
 
 .tweet p {
-  margin-left: 5px;
+  margin-left: 1em;
+  flex-basis: 90%;
 }
 
 .tweet footer {
   margin-left: 5px;
   margin-bottom: 5px;
+  display: flex;
 }
 
-.tweets:hover > div {
+.created {
+  margin-left: 0.5em;
+}
+
+
+.tweet {
+  border: 2px solid darkgray;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 30px;
   opacity: 0.5;
 }
 
-#icons {
-  float: right;
-  margin-right: 5px;
-  margin-top: 5px;
-  width: 10px;
-  height: 10px;
+.tweet:hover {
+  opacity: 1;
 }
 
-.username {
-  background-color: #00a087;
-  margin: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding-bottom: 50px;
+.tweet:hover img.like {
+  opacity: 1;
+  display: block;
 }
 
-.handle {
-  float: left;
+.tweet:hover img.retweet {
+  opacity: 1;
+  display: block;
 }
 
+.tweet:hover img.flag {
+  opacity: 1;
+  display: block;
+}
+
+.button {
+  border-radius: 0.5em;
+}
