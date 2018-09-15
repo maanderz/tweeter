@@ -58,10 +58,12 @@ $(document).ready(function() {
     $('form#input').on('submit', function(event){
         event.preventDefault();
         //content from form
+        //checking input in textarea
         var input = $('textarea').val();
         if (input === "" || input.length > 140) {
             $('.error').show();
         } else {
+        //composing the tweet
             $.ajax({
                 url: '/tweets/',
                 method:'POST',
@@ -79,7 +81,7 @@ $(document).ready(function() {
     loadTweets();
 })
 
-
+//compose button and textbox autofocus
 $(document).ready(function(){
     $('.btn').click(function(){
         $('.new-tweet').slideToggle();
