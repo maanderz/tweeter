@@ -21,6 +21,8 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js" integrity="sha256-59IZ5dbLyByZgSsRE3Z0TjDuX7e1AiqW5bZ8Bg50dsU=" crossorigin="anonymous"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
@@ -52,7 +54,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id ="input" action="/tweets/" method="POST">
-          <textarea name="text" placeholder=" What are you humming about?"></textarea>
+          <textarea class="text" placeholder=" What are you humming about?"></textarea>
           <button type="submit" class="button">Tweet</button>
           
           <span class="error"> You can't do that! </span>

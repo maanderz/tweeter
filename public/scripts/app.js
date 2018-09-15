@@ -15,9 +15,9 @@
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
     }
-  
+    
     function createTweetElement(tweet) {
-        console.log(tweet);
+        
         let $tweet = $('<article>').addClass('tweet');
         let $header = $('<header>').addClass('header');
         let $user = $('<h2>').addClass('username').text(tweet.user.name);
@@ -25,7 +25,7 @@
         let $image = $('<img>').addClass('avatar').attr('src', tweet.user.avatars.small);
         let $content = $('<p>').addClass('content').text(tweet.content.text);
         let $footer = $('<footer>').addClass('footer');
-        let $created_at = $('<p>').addClass('created').text(tweet.created_at);
+        let $created_at = $('<p>').addClass('created').text(moment(tweet.created_at).fromNow());
         let $likeBtn = $('<img>').addClass('like').attr('src', "/images/images.png");
         let $retweet = $('<img>').addClass('retweet').attr('src', "/images/retweet.png");
         let $flag = $('<img>').addClass('flag').attr('src', "/images/flag.png");

@@ -13,25 +13,27 @@
   border-top-left-radius: 0.5em;
   padding-bottom: 1em;
   display: flex;  
+  border-bottom:2px solid darkgrey
 }
 
 .avatar {
   border-radius: 1em;
   margin: 1em 1em 0.5em 1em;
   flex-basis: 25%;
+  border: 2px solid darkgray;
 }
 
 .username {
   margin-top: 1em;
   flex-basis: 75%;
   margin-right: 3em;
-  font-size: large;
+  font-size: larger;
 }
 
 .handle {
   margin: 2em 0.5em 0.5em 0em;
-  padding-left: 3em;
-  margin-top: 1em;
+  padding-left: 2em;
+  margin-top: 3em;
   font-size: medium;
   flex-basis: 25%;
 }
@@ -105,4 +107,16 @@
 
 .button {
   border-radius: 0.5em;
+  border: 1px solid darkgray;
+}
+
+.content {
+  opacity: 1;
+  font-size: 1.5em;
+}
+
+.text {
+  padding-top: 1em;
+  padding-left: 0.5em;
+  font-size: large;
 }
