@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-  $(document).ready(function() {
+$(document).ready(function() {
     $('.error').hide();
     function renderTweets(tweets) {
     // loops through tweets
@@ -58,15 +58,14 @@
     $('form#input').on('submit', function(event){
         event.preventDefault();
         //content from form
-        let formData = $('form#input').serialize();
-
         var input = $('textarea').val();
         if (input === "" || input.length > 140) {
             $('.error').show();
         } else {
-            $.ajax('/tweets', {
-                method: 'POST',
-                data: formData
+            $.ajax({
+                url: '/tweets/',
+                method:'POST',
+                data: $('form#input').serialize(),
             }).then(function() {
                 //clearing form
                 $('#tweet-container').empty();
@@ -77,16 +76,13 @@
                 }).then(renderTweets);
             }
         })
-        loadTweets();
+    loadTweets();
+})
 
-    })
 
-    $(document).ready(function(){
-        $('.btn').click(function(){
-            $('.new-tweet').slideToggle();
-            $('textarea').focus();
-
-            
-          });
-    
+$(document).ready(function(){
+    $('.btn').click(function(){
+        $('.new-tweet').slideToggle();
+        $('textarea').focus();
+      });
 });

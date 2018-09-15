@@ -11,16 +11,13 @@
 
 #nav-bar .logo {
   float: left;
-  padding-bottom: 5px;
-  height: 100px;
-  width: 100px;
-  margin-right: 5px;
+  padding-bottom: 1em;
+  height: 10em;
+  width: 8em;
 }
 
-
-
 #nav-bar .header {
-  line-height: 100px;
+  line-height: 2.5em;
   font-size: 300%;
 }
 

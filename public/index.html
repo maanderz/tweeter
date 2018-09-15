@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -32,8 +34,6 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     
-  
-
   </head>
 
   <body>
@@ -43,9 +43,8 @@
       <img class="logo" src="/images/bird.png">
 
       <span class="header">Tweeter</span>
-
-      <input type="button" style="width:100px;height:50px" class="btn" value="Compose" />
-
+     
+      <button style="font-size: 20px" class="btn"> Compose <i class="fa fa-edit"></i></button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -54,9 +53,8 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id ="input" action="/tweets/" method="POST">
-          <textarea class="text" placeholder=" What are you humming about?"></textarea>
+          <textarea class="text" placeholder=" What are you humming about?" name="text"></textarea>
           <button type="submit" class="button">Tweet</button>
-          
           <span class="error"> You can't do that! </span>
           <span class="counter">140</span>
         </form>

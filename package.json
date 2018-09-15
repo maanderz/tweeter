@@ -11,6 +11,9 @@
   "author": "Lighthouse Labs",
   "license": "ISC",
   "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/mongodb": "^3.1.7",
     "body-parser": "^1.15.2",
     "chance": "^1.0.2",
     "express": "^4.13.4",

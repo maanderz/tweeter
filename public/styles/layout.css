@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -10,46 +11,30 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   margin: 0;
+  font-family: "American Typewriter", serif;
   color: #244751;
   background-color: #eee;
-  font-family: "American Typewriter", serif;
 }
 
 main.container {
-
-  margin-top: 6.5em;
-  margin-bottom: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 6.5em auto 2em auto;
   padding: 2em;
   width: 30em;
-  background-color: white;
   border-radius: 0.5em;
+  background-color: white;
 }
 
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- .btn {
-  font: 1rem "American Typewriter", serif;
+.btn {
+  font: "American Typewriter", serif;
   font-size: 20px;
-  padding-left: 5px;
-  background: white;
-  border: none;
+  padding-left: 0.5em;
+  margin-top: 1.3em;
   border-radius: 0.5em;
-  margin: 1em;
   float: right;
-  margin-top: 1em;
-  border:2px solid black;
+  background: white;
+  border: 2px solid black;
 }
 
 .btn:hover {

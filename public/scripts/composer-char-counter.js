@@ -10,8 +10,8 @@ $(document).ready(function() {
 
     count.html(textRemaining);
 
-      if (textLength > maxChars) {
-        count.addClass('red');
+    if (textLength > maxChars) {
+      count.addClass('red');
       } else {
         count.removeClass('red');
       }
