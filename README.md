@@ -4,10 +4,9 @@ Tweeter is a simple, single-page Twitter clone using CSS, JS, jQuery and AJAX to
 
 ## Final Product 
 
+!["Screenshot of compose box"](https://github.com/maanderz/tweeter/blob/feature/mongodb/public/images/Screen%20Shot%202018-09-15%20at%201.26.18%20PM.png?raw=true)
 
-
-
-
+!["Screenshot of a tweet"](https://github.com/maanderz/tweeter/blob/feature/mongodb/public/images/Screen%20Shot%202018-09-15%20at%201.29.26%20PM.png?raw=true)
 
 
 ## Dependencies
